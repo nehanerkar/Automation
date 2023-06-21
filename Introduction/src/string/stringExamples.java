@@ -60,7 +60,7 @@ public class stringExamples {
         //split - Below example converts text into array
         String text= new String("Hello, My name is Sachin");  
         String[] sentences = text.split("\\.");  
-        System.out.println(Arrays.toString(sentences));  
+        System.out.println(Arrays.toString(sentences));  // [Hello, My name is Sachin]
         
         //toUpperCase() and toLowerCase()
         System.out.println("toUpperCase() = "+ s6.toUpperCase());
@@ -94,6 +94,10 @@ public class stringExamples {
         String s13=String.valueOf(a);    
         System.out.println("valueOf() = "+ s13);   
         
+        //2nd way
+        s13=Integer.toString(a);    
+        System.out.println("Integer.toString() = "+ s13);
+        
         String s14=String.valueOf(b);    
         System.out.println("valueOf() = "+ s14);   
         
@@ -111,6 +115,109 @@ public class stringExamples {
         
         String s19=String.valueOf(g);    
         System.out.println("valueOf() = "+ s19);   
+        
+        
+        //toCharArray() - Convert String to Char Array
+        char ch1[] = (s6+s7).toCharArray(); //Sachin Tendulkar
+        int len = ch1.length;
+        System.out.println("Length of String to convert toCharArray(): "+len);
+        System.out.println("Char Array Elements: ");
+        int i;
+        for(i = 0; i<len; i++)
+        {
+        	System.out.println(ch1[i]);
+        }
+        
+        //replace() - Replace all occurences old char with new char respectively
+        String newt = t.replace('e', 'a');
+        System.out.println("Replaced char replce(): "+ newt);
+        //Replace old String with new String respectively
+        String news6s7 = (s6+s7).replace(s6, "Aryan");
+        System.out.println("Replaced String replace(): "+ news6s7);
+        
+        //replaceAll()
+        String newt1 = t.replaceAll("e", "a");
+        System.out.println("Replaced String as char replaceAll(): "+ newt1);
+        //Replace old String with new String respectively
+        String news6s71 = (s6+s7).replaceAll(s6, "Aryan");
+        System.out.println("Replaced char replaceAll(): "+ news6s71);
+        //replace white space
+        String news6s72 = (s6+s7).replaceAll("\\s", "");
+        System.out.println("Replaced white space: "+ news6s72);
+        
+        //indexOf() - Returns first occurrence of specified character or string
+        int indext = t.indexOf('r'); //Nerkar
+        System.out.println("indexOf(): "+ indext);
+        int indext1 = (s+" "+t).indexOf("Nerkar");
+        System.out.println("indexOf(): "+ indext1);
+        int indext2 = (s+" "+t).indexOf("Nerkar",4); //returns the index of 'Nerkar' substring after 4th index
+        System.out.println("indexOf(): "+ indext2);
+        
+        //lastIndexOf() method returns the last index of the given character value or substring. 
+        //If it is not found, it returns -1. The index counter starts from zero.
+        int indext3 = (s+" "+t).lastIndexOf('e');
+        System.out.println("LastIndexOf(): "+ indext3);
+        
+        //isEmpty - Return true or false values
+        boolean output;
+        output = s6.isEmpty();
+        System.out.println("isEmpty(): "+ output);
+        
+        //contains()
+        output = s6.contains("Sachin");
+        System.out.println("contains(): "+ output);
+        
+        //reverse() using StringBuffer and StringBuilder
+       // StringBuilder sb = new StringBuilder("Neha");
+        StringBuilder rev = s12.reverse();
+        System.out.println("reverse() using StringBuilder: "+ rev);
+        
+        StringBuffer SB = new StringBuffer("Neha");
+        StringBuffer REV = SB.reverse();
+        System.out.println("reverse() using StringBuilder: "+ REV);
+        
+        //reverse() using String
+        String sg = "nitin";
+        char ch2[] = sg.toCharArray();
+        String revsg = "";
+        for(i = sg.length()-1; i>=0; i--)
+        {
+        	revsg+= ch2[i];
+        }
+        System.out.println(revsg);
+        if(sg.equals(revsg))
+        {
+        	System.out.println("It is a palindrome string");
+        }else
+        {
+        	System.out.println("It is not a palindrome string");
+        }
+        
+       
+        //Interger.parseInt() - Converting String into int
+        String si = "32";
+        int u = Integer.parseInt(si);
+        System.out.println("Integer.parseInt(): "+u);
+        
+       //2nd way
+        u = Integer.valueOf(si);
+        System.out.println("Integer.valueOf(): "+u);
+        
+        
+        //Count number of words in string
+        String rn = " My name is Neha ";
+        rn = rn.trim();
+        char c1[]  = rn.toCharArray();
+        System.out.println(c1);
+        int count = 1;
+        for(i = 0; i<=rn.length()-1;i++)
+        {
+        	if(c1[i] == ' ')
+        	{
+        		count+= 1;
+        	}
+        }
+        System.out.println("Total words: "+count);
 	}
 
 }
