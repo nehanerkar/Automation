@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "cypress": "^12.15.0"
+  },
+  "name": "cypressautomation",
+  "version": "1.0.0",
+  "description": "Cypress Code Examples",
+  "main": "cypress.config.js",
+  "devDependencies": {
+    "cypress-iframe": "^1.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Neha Nerkar",
+  "license": "ISC"
+}

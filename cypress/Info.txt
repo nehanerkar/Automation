@@ -1,0 +1,50 @@
+Download VS Code
+Open terminal
+Create new folder using command: mkdir foldername
+go to the folder: cd foldername
+Install Cypress: npm install cypress --save -dev
+Initialize: npm init
+Open cypress: npm cypress open
+
+/// <reference types="Cypress" /> allows us to leverage VS Code Intellisense for the autocompletion
+
+Cypress is asynchronous in nature and there is no gaurantee in sequence of execution, but the cypress
+takes care of it. It uses then() for handling asynchronous behaioue internally.
+
+Alias (as) use to optimize the code by resuing the locators
+
+Cypress auto accepts alerts and pop up
+Cypress has capability of browser events window:alert which get fired on alert open
+Cypress has capability to manipulate DOM 
+
+next() is used to move from one sibling to its next sibling
+
+There is no built in support in cypress to hover on an element, JQuery's method as 
+show() is used to hover.
+If the one does not want to use show method, then one must use click({force:true}) to disable
+error checking
+
+invoke() is used to define JQuery methods
+
+each($el,index,$list) - Is use for iteration purpose
+
+Cypress does not support cross domain functionality, it means two different Urls
+cannot be opened on one common window/tab but it can be achieved by extracting 
+the href property value using prop() of JQuery.
+The prop() method sets or returns properties and values of the selected elements.
+But we cannot call Prop() directly, we need to resolve promises using then() and after that we need
+to use origin() which will help to click on the elemnt of different domain.
+
+origin() - Enables running Cypress commands in a secondary origin.
+
+npm install -D cypress-iframe is to install iframe in cypress to handle iframe functionality
+and need to import "cypress-iframe"
+frameLoaded() is to tell the cypress which iframe to load for performing actions
+iframe() is to tell cypress that we need to perform an action within iframe and not on regular DOM.
+
+hooks in cypress is useful to set conditions before/before each set of test/tests and
+also useful to clean up conditions after a set of tests or after each test
+
+cy.pause() - For debugging
+pause() will stop test execution to inspect the web application, the DOM, the network.
+debug() will stop only when the developer tools are open.
