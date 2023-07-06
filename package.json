@@ -1,16 +1,20 @@
 {
   "dependencies": {
-    "cypress": "^12.15.0"
+    "pcf-start": "^1.24.3",
+    "stream": "^0.0.2",
+    "stream-promise": "^3.2.0"
   },
   "name": "cypressautomation",
   "version": "1.0.0",
   "description": "Cypress Code Examples",
-  "main": "cypress.config.js",
+  "main": "index.js",
   "devDependencies": {
+    "cypress": "^10.9.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-iframe": "^1.0.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress run"
   },
   "author": "Neha Nerkar",
   "license": "ISC"

@@ -4,12 +4,12 @@ Create new folder using command: mkdir foldername
 go to the folder: cd foldername
 Install Cypress: npm install cypress --save -dev
 Initialize: npm init
-Open cypress: npm cypress open
+Open cypress: npx cypress open
 
 /// <reference types="Cypress" /> allows us to leverage VS Code Intellisense for the autocompletion
 
 Cypress is asynchronous in nature and there is no gaurantee in sequence of execution, but the cypress
-takes care of it. It uses then() for handling asynchronous behaioue internally.
+takes care of it. It uses then() for handling asynchronous behaiour internally.
 
 Alias (as) use to optimize the code by resuing the locators
 
@@ -48,3 +48,72 @@ also useful to clean up conditions after a set of tests or after each test
 cy.pause() - For debugging
 pause() will stop test execution to inspect the web application, the DOM, the network.
 debug() will stop only when the developer tools are open.
+
+defaultCommandTimeout variable set in config file behaves like implicit waits in selenium.
+Cypress.Config('defaultCommandTimeout',5000) - behaves like explicit waits in selenium. It is
+respecive to spec level.
+
+Number() is used to convert string into int.
+
+runMode in config file allows us to run the failed TC again and again depends on the number provided.
+and it will work only when we run the cypress through terminal in headed mode.
+To capture video, Screenshots and html report: npx cypress run --spec cypress\e2e\Introduction.js --headed --browser chrome
+OR npx cypress run -b chrome OR
+./node_modules/.bin/cypress run -e TAGS='@RunMe' --headless --browser chrome
+
+Install cucumber
+npm install @badeball/cypress-cucumber-preprocessor
+
+shadow() is used to find invisible elements
+cy.get().shadow().find().click()
+
+cy.title() - to fetch the title
+
+The difference between == and === is that: 
+== converts the variable values to the same type before performing comparison. This is called type coercion. 
+=== does not do any type conversion (coercion) and returns true only if both values and types are identical for the two variables being compared.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cypress
+
+Cypress - 7.3.0
+node js - v14.17.3
+JavaScript - 1.5
+Java - 1.8.0_351
+VBScript - 5.8.18538
+Pyhton - 3.9.7
+
+
+to install cypress = npm install cypress@7.3.0 --force
+npm install -g npm@9.2.0
+to open cypress = npx cypress open
+npm install cypress-cucumber-preprocessor --legacy-peer-deps
+
+To open developer tool = ctrl+shift+i
+From network tab, open the first failed call in a new tab and then come back to this page, and refresh
+
+Update in cypress.json
+For Mobile viewport = 414X768
+For Desktop viewport = 720X1280
+For Tablet viewport = 768X1024
+
+If error in cypress installation
+npm cache clear --force
+npm install --save --legacy-peer-deps
+npm install --save-dev cypress-cucumber-preprocessor
+npm install --save-dev cypress@10.9.0
+yarn upgrade cypress@11.2.0
+
+npm install cypress@10.9.0 --force
