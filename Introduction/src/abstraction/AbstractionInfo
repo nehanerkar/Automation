@@ -1,0 +1,81 @@
+Abstraction(Class)
+
+What:
+Abstraction is a process of hiding the implementation details and showing only functionality to the user.
+It needs to be extended and its method implemented.
+
+Points:
+1.	An abstract class must be declared with an abstract keyword.
+2.	It can have abstract and non-abstract methods.
+3.	It cannot be instantiated.
+4.	It can have constructors and static methods also.
+5.	It can have final methods which will force the subclass not to change the body of the method.
+
+Example: abstract class A{}
+________________________________________________________________________________________________________________
+
+Abstraction(Method)
+
+What:
+A method which is declared as abstract and does not have implementation is known as an abstract method.
+
+Example: abstract void A_Method()
+
+_________________________________________________________________________________________________________________
+
+An abstract class can have a data member, abstract method, 
+method body (non-abstract method), constructor, and even main() method.
+
+_________________________________________________________________________________________________________________
+
+Interface
+
+What:
+The interface in Java is a mechanism to achieve abstraction and multiple inheritance in Java.
+It has static constants and abstract methods.
+Java Interface also represents the IS-A relationship.
+It cannot be instantiated just like the abstract class.
+All the methods are public, static and final by default. 
+Since Java 8, interface can have default and static methods
+
+Example:
+interface Animal {}
+
+_________________________________________________________________________________________________________________
+
+Multiple Interface:
+If a class implements multiple interfaces, or an interface extends multiple interfaces, it is known as multiple inheritance.
+
+multiple inheritance is not supported in the case of class because of ambiguity. 
+However, it is supported in case of an interface because there is no ambiguity. 
+It is because its implementation is provided by the implementation class. 
+
+________________________________________________________________________________________________________________
+
+Difference between Abstraction and Interfaces
+
+Abstraction:
+1.	Abstract class can have abstract and non-abstract methods.
+2.	Abstract class doesn't support multiple inheritance.
+3.	Abstract class can have final, non-final, static and non-static variables.
+4.	Abstract class can provide the implementation of interface.
+5.	An abstract class can extend another Java class and implement multiple Java interfaces.
+6.	A Java abstract class can have class members like private, protected, etc.
+
+Interfaces:
+1.	Interface can have only abstract methods. Since Java 8, it can have default and static methods also.
+2.	Interface supports multiple inheritance.
+3.	Interface has only static and final variables.
+4.	Interface can't provide the implementation of abstract class.
+5.	An interface can extend another Java interface only.
+6.	Members of a Java interface are public by default.
+
+
+
+
+
+
+
+
+
+

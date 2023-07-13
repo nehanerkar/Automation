@@ -46,12 +46,4 @@ public class stringInfo {
 //2.StringBuilder is more efficient than StringBuffer.
 //3.StringBuilder provides reverse() to reverse the string unlike String	
 	
-	
-	
-	
-	
-	
-	
-	
-	
 }

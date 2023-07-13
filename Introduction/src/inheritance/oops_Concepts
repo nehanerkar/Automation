@@ -1,0 +1,47 @@
+Inheritance
+
+What:
+1. 	Inheritance represents the IS-A relationship which is also known as a parent-child relationship.
+2. 	It is a mechanism in which one object acquires all the properties and behaviors of a parent object.
+3. 	When you inherit from an existing class, you can reuse methods and fields of the parent class. 
+	Moreover, you can add new methods and fields in your current class also.
+	
+Why:
+1.	For Method Overriding (so runtime polymorphism can be achieved).
+2.	For Code Reusability.
+
+How:
+class Subclass-name extends Superclass-name  
+{  
+   //methods and fields  
+}  
+The meaning of "extends" is to increase the functionality.
+
+Types:
+1.	Single: When a class inherits another class, it is known as a single inheritance.
+2.	Multilevel: When there is a chain of inheritance, it is known as multilevel inheritance.
+3.	Hierarchical: When two or more classes inherits a single class, it is known as hierarchical inheritance.
+
+Multiple and Hybrid inheritance is not supported through class(interface only).
+
+Why multiple inheritance is not supported through java class?
+To reduce the complexity and simplify the language, multiple inheritance is not supported in java.
+Consider a scenario where A, B, and C are three classes. The C class inherits A and B classes. 
+If A and B classes have the same method and you call it from child class object, 
+there will be ambiguity to call the method of A or B class.
+Since compile-time errors are better than runtime errors, Java renders compile-time error if you inherit 2 classes. 
+So whether you have same method or different, there will be compile time error.
+
+class A{  
+void msg(){System.out.println("Hello");}  
+}  
+class B{  
+void msg(){System.out.println("Welcome");}  
+}  
+class C extends A,B{//suppose if it were  
+   
+ public static void main(String args[]){  
+   C obj=new C();  
+   obj.msg();//Now which msg() method would be invoked?  
+}  
+}  
